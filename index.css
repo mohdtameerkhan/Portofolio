@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baumans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* COLORS */
+:root{
+
+    --primary-text-color: #1d1d1f;;
+    --secondary-text-color:#0071e3;
+    --accent-color:#0071e3;
+    --background-color:black;
+    --padding-inline: 10px;
+    --nav-background:#99999933;
+}
+/* ----FONT SIZE------ */
+h2{
+    font-size: 40px;
+    color: #1d1d1f; 
+}
+body
+{
+    font-family: "Baumans", system-ui;
+     font-weight: 100; 
+    font-style: normal;
+    color: var(--primary-text-color);
+    
+}
+.container
+{
+    max-width: 1220px;
+    padding: var(--padding-inline);
+    margin-inline: auto;
+    
+
+}
+/* ---NAV BAR--- */
+header{
+    height: 95vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-nav{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  color: var(--primary-text-color);
+  background-color:var(--nav-background);
+  padding: 15px;
+  border-radius: 15px;
+  /* background-color: var(--background-color); */
+  
+}
+.main-nav .list-container{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.list-container li a{
+    text-decoration: none;
+    color: var(--primary-text-color);
+    width: 100%;
+}
+
+span{
+    color: var(--secondary-text-color);
+}
+.main-nav .list-container li:hover{
+    
+     border-bottom: 2px solid var(--accent-color); 
+}
+
+/* -----HEADER------- */
+
+
+.header-text{
+   margin-top: 20%;
+}
+
+.header-secti
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-secti img
+{
+   height: 500px;
+   width: 500px;
+   
+}
+
+.header-text h2
+{
+    margin-top: 20px;
+    position: relative;
+}
+
+
+
+/* ------About section-------- */
+
+#About-Section
+{
+    padding: 35px 0px;
+    background-color:#000000;
+    
+    
+}
+
+.about-big-container
+{
+   display: flex;
+   justify-content: space-between;
+   z-index: 1;
+}
+.about-img-box
+{
+  max-width: 30%;
+}
+.about-img-box img
+{
+    width: 100%;
+    border-radius:15px;
+}
+.about-row-1 h2
+{
+    color: white;
+}
+
+.about-text-box
+{
+    max-width: 60%;
+    color: white !important;
+}
+
+.about-row-1 p
+{
+    text-align: justify;
+    
+}
+.about-row-2{
+    display: flex;
+    max-width: 60%;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: white;
+}
+.tab-links
+{
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 40px;
+}
+.tab-links::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 0;
+    background-color: var(--secondary-text-color);
+    transition: 0.4s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-content.active-tab
+{
+    display: block;
+}
+.tab-content
+{
+    display: none;
+}
+
+/* -- -------MY SERVICES------ */
+#myservices
+{
+    
+    padding: 35px 0px;
+}
+
+.myservices-container
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.service-box
+{
+    padding: 25px;
+    background-color: rgb(124, 119, 119, 0.3);
+    border-radius: 15px;
+    height: 290px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-around;
+    transition: 1s;
+}
+.service-box i
+{
+    font-size: 40px;
+    color: var(--secondary-text-color);
+}
+.service-box:hover
+{
+    background-color: rgb(255, 0, 34);
+    transform: translateY(-10px);
+    color:white;
+}
+
+/* ------------ work section----------- */
+#mywork
+{
+    padding: 35px 0px;
+}
+.work-box
+{
+   text-align: center;
+    border-radius: 15px;
+    height: 390px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    
+}
+.work-box1{background-image: url(./images/work-1.png);
+background-size: cover;}
+.work-box2{background-image: url(./images/work-2.png);
+    background-size: cover;}
+.work-box3{background-image: url(./images/work-3.png);
+        background-size: cover;}
+
+
+.work-overlay {
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 34, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .9s;
+    border-radius: 15px;
+    
+    
+  }
+  .work-box:hover .work-overlay
+  {
+    height: 100%;
+    position: absolute;
+    padding: 20px;
+    color: white;
+  }
+  
+.work-overlay h1
+{
+    padding: 5px;
+}
+.work-overlay a{
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 50px;
+}
+.work-overlay a i
+{
+    margin-top: 20px;
+}
+
+/* -------contact---------------- */
+.contact_section
+{
+    /* display: grid;
+    grid-template-columns: auto auto; */
+
+    display: flex;
+
+
+}
+
+
+.contact_box1
+{
+    flex-basis: 35%;
+}
+.contact_box2
+{
+    flex-basis: 60%;
+}
+.Con_details
+{
+    margin-top: 20px;
+}
+.Con_details p i
+{
+    color: var(--secondary-text-color);
+    font-size: 20px;
+    margin: 5px;
+}
+
+.logo
+{
+    font-size: 25px;
+    margin: 10px 0;
+   
+}
+.logo a
+{
+    color: var(--primary-text-color);
+    padding: 0 10px;
+}
+.logo a:hover
+{
+    color: var(--secondary-text-color);
+}
+
+.contact_box2 form input
+{
+  width: 100%;
+  margin: 15px 0;
+  padding: 10PX;
+  background-color: rgb(143, 138, 138, 0.2);
+  color: var(--primary-text-color);
+  border: none;
+}
+textarea
+{
+    width: 100%;
+    margin: 15px 0;
+    background-color: rgb(143, 138, 138, 0.2);
+    color: white;
+    padding: 10px;
+    border: none;
+}
+button
+{
+    background-color: var(--secondary-text-color);
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    color: aliceblue;
+    text-decoration: wavy;
+}
+
+/* -----footer------ */
+.footer
+{
+    background-color: rgb(143, 138, 138, 0.2);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+button
+{
+    cursor: pointer;
+}
+
+/* ---------form submit message */
+
+#msg
+{
+    color: var(--secondary-text-color);
+    padding: 20px 0;
+}
+
